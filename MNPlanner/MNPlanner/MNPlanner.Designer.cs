@@ -52,10 +52,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(266, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(355, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(143, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -64,10 +64,9 @@
             this.lblTaskID.AutoSize = true;
             this.lblTaskID.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskID.Location = new System.Drawing.Point(17, 90);
-            this.lblTaskID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTaskID.Location = new System.Drawing.Point(24, 115);
             this.lblTaskID.Name = "lblTaskID";
-            this.lblTaskID.Size = new System.Drawing.Size(56, 17);
+            this.lblTaskID.Size = new System.Drawing.Size(67, 20);
             this.lblTaskID.TabIndex = 1;
             this.lblTaskID.Text = "Task ID";
             this.lblTaskID.Click += new System.EventHandler(this.label1_Click);
@@ -75,10 +74,10 @@
             // txtboxTaskID
             // 
             this.txtboxTaskID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtboxTaskID.Location = new System.Drawing.Point(109, 87);
-            this.txtboxTaskID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxTaskID.Location = new System.Drawing.Point(143, 113);
+            this.txtboxTaskID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxTaskID.Name = "txtboxTaskID";
-            this.txtboxTaskID.Size = new System.Drawing.Size(55, 23);
+            this.txtboxTaskID.Size = new System.Drawing.Size(72, 27);
             this.txtboxTaskID.TabIndex = 2;
             // 
             // lblTaskDeadline
@@ -86,21 +85,20 @@
             this.lblTaskDeadline.AutoSize = true;
             this.lblTaskDeadline.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskDeadline.Location = new System.Drawing.Point(17, 221);
-            this.lblTaskDeadline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTaskDeadline.Location = new System.Drawing.Point(24, 275);
             this.lblTaskDeadline.Name = "lblTaskDeadline";
-            this.lblTaskDeadline.Size = new System.Drawing.Size(64, 17);
+            this.lblTaskDeadline.Size = new System.Drawing.Size(75, 20);
             this.lblTaskDeadline.TabIndex = 5;
             this.lblTaskDeadline.Text = "Deadline";
             // 
             // txtboxTaskName
             // 
             this.txtboxTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtboxTaskName.Location = new System.Drawing.Point(109, 128);
-            this.txtboxTaskName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxTaskName.Location = new System.Drawing.Point(143, 162);
+            this.txtboxTaskName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxTaskName.Multiline = true;
             this.txtboxTaskName.Name = "txtboxTaskName";
-            this.txtboxTaskName.Size = new System.Drawing.Size(203, 69);
+            this.txtboxTaskName.Size = new System.Drawing.Size(272, 84);
             this.txtboxTaskName.TabIndex = 8;
             // 
             // lblTaskName
@@ -108,20 +106,19 @@
             this.lblTaskName.AutoSize = true;
             this.lblTaskName.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskName.Location = new System.Drawing.Point(17, 131);
-            this.lblTaskName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTaskName.Location = new System.Drawing.Point(24, 165);
             this.lblTaskName.Name = "lblTaskName";
-            this.lblTaskName.Size = new System.Drawing.Size(80, 17);
+            this.lblTaskName.Size = new System.Drawing.Size(94, 20);
             this.lblTaskName.TabIndex = 7;
             this.lblTaskName.Text = "Task Name";
             // 
             // dtpDeadline
             // 
-            this.dtpDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpDeadline.Location = new System.Drawing.Point(109, 221);
-            this.dtpDeadline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpDeadline.Location = new System.Drawing.Point(143, 271);
+            this.dtpDeadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDeadline.Name = "dtpDeadline";
-            this.dtpDeadline.Size = new System.Drawing.Size(203, 21);
+            this.dtpDeadline.Size = new System.Drawing.Size(272, 27);
             this.dtpDeadline.TabIndex = 9;
             // 
             // lblTaskFor
@@ -129,10 +126,9 @@
             this.lblTaskFor.AutoSize = true;
             this.lblTaskFor.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskFor.Location = new System.Drawing.Point(17, 266);
-            this.lblTaskFor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTaskFor.Location = new System.Drawing.Point(24, 324);
             this.lblTaskFor.Name = "lblTaskFor";
-            this.lblTaskFor.Size = new System.Drawing.Size(138, 17);
+            this.lblTaskFor.Size = new System.Drawing.Size(164, 20);
             this.lblTaskFor.TabIndex = 10;
             this.lblTaskFor.Text = "What is the task for?";
             this.lblTaskFor.Click += new System.EventHandler(this.label1_Click_1);
@@ -148,19 +144,19 @@
             "Sport",
             "Social",
             "Other"});
-            this.cmbTaskFor.Location = new System.Drawing.Point(170, 263);
-            this.cmbTaskFor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTaskFor.Location = new System.Drawing.Point(225, 321);
+            this.cmbTaskFor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTaskFor.Name = "cmbTaskFor";
-            this.cmbTaskFor.Size = new System.Drawing.Size(142, 25);
+            this.cmbTaskFor.Size = new System.Drawing.Size(190, 28);
             this.cmbTaskFor.TabIndex = 11;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.Location = new System.Drawing.Point(91, 319);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(126, 393);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(98, 31);
+            this.btnAdd.Size = new System.Drawing.Size(131, 38);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -168,10 +164,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdate.Location = new System.Drawing.Point(203, 319);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(276, 393);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(98, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(131, 38);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -180,10 +176,10 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClear.Location = new System.Drawing.Point(426, 319);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(573, 393);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(98, 31);
+            this.btnClear.Size = new System.Drawing.Size(131, 38);
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -191,10 +187,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete.Location = new System.Drawing.Point(314, 319);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(424, 393);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(98, 31);
+            this.btnDelete.Size = new System.Drawing.Size(131, 38);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -202,20 +198,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(338, 128);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(462, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(294, 160);
+            this.dataGridView1.Size = new System.Drawing.Size(380, 189);
             this.dataGridView1.TabIndex = 16;
             // 
             // txtboxSearch
             // 
             this.txtboxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtboxSearch.Location = new System.Drawing.Point(390, 87);
-            this.txtboxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtboxSearch.Location = new System.Drawing.Point(533, 112);
+            this.txtboxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxSearch.Name = "txtboxSearch";
-            this.txtboxSearch.Size = new System.Drawing.Size(242, 23);
+            this.txtboxSearch.Size = new System.Drawing.Size(309, 27);
             this.txtboxSearch.TabIndex = 17;
             // 
             // lblSearch
@@ -223,28 +219,27 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSearch.Location = new System.Drawing.Point(333, 90);
-            this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearch.Location = new System.Drawing.Point(461, 116);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(53, 17);
+            this.lblSearch.Size = new System.Drawing.Size(62, 20);
             this.lblSearch.TabIndex = 18;
             this.lblSearch.Text = "Search";
             this.lblSearch.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(623, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(831, 14);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(29, 31);
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
             // MNPlanner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 376);
+            this.ClientSize = new System.Drawing.Size(876, 463);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtboxSearch);
@@ -263,7 +258,7 @@
             this.Controls.Add(this.lblTaskID);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MNPlanner";
             this.Text = "MNPlanner";
             this.Load += new System.EventHandler(this.MNPlanner_Load);
