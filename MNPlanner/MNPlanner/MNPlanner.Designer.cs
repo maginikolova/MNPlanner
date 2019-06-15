@@ -90,6 +90,7 @@
             this.lblTaskDeadline.Size = new System.Drawing.Size(75, 20);
             this.lblTaskDeadline.TabIndex = 5;
             this.lblTaskDeadline.Text = "Deadline";
+            this.lblTaskDeadline.Click += new System.EventHandler(this.lblTaskDeadline_Click);
             // 
             // txtboxTaskName
             // 
@@ -120,6 +121,7 @@
             this.dtpDeadline.Name = "dtpDeadline";
             this.dtpDeadline.Size = new System.Drawing.Size(272, 27);
             this.dtpDeadline.TabIndex = 9;
+            this.dtpDeadline.ValueChanged += new System.EventHandler(this.dtpDeadline_ValueChanged);
             // 
             // lblTaskFor
             // 
@@ -160,6 +162,7 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 

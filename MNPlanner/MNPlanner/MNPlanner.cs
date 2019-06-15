@@ -41,5 +41,20 @@ namespace MNPlanner
         {
 
         }
+
+        private void dtpDeadline_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTaskDeadline_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
