@@ -15,7 +15,7 @@ namespace MNPlanner.MNPlannerClasses
         //Acts as a data carrier in our application
         public int TaskID { get; set; }
         public string TaskName { get; set; }
-        public DateTime TaskDeadline { get; set; }
+        public string TaskDeadline { get; set; }
         public string TaskFor { get; set; }
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
@@ -54,6 +54,7 @@ namespace MNPlanner.MNPlannerClasses
         {
             //Creating a default return type and setting it's value to false
             bool isSuccess = false;
+
             //Step1: Connect Database
             SqlConnection conn = new SqlConnection(myconnstrng);
             try

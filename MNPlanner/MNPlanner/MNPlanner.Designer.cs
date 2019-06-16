@@ -34,7 +34,7 @@
             this.lblTaskDeadline = new System.Windows.Forms.Label();
             this.txtboxTaskName = new System.Windows.Forms.TextBox();
             this.lblTaskName = new System.Windows.Forms.Label();
-            this.dtpDeadline = new System.Windows.Forms.DateTimePicker();
+            this.dtpTaskDeadline = new System.Windows.Forms.DateTimePicker();
             this.lblTaskFor = new System.Windows.Forms.Label();
             this.cmbTaskFor = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -77,7 +77,8 @@
             this.txtboxTaskID.Location = new System.Drawing.Point(143, 113);
             this.txtboxTaskID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxTaskID.Name = "txtboxTaskID";
-            this.txtboxTaskID.Size = new System.Drawing.Size(72, 27);
+            this.txtboxTaskID.ReadOnly = true;
+            this.txtboxTaskID.Size = new System.Drawing.Size(272, 27);
             this.txtboxTaskID.TabIndex = 2;
             // 
             // lblTaskDeadline
@@ -113,15 +114,15 @@
             this.lblTaskName.TabIndex = 7;
             this.lblTaskName.Text = "Task Name";
             // 
-            // dtpDeadline
+            // dtpTaskDeadline
             // 
-            this.dtpDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpDeadline.Location = new System.Drawing.Point(143, 271);
-            this.dtpDeadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpDeadline.Name = "dtpDeadline";
-            this.dtpDeadline.Size = new System.Drawing.Size(272, 27);
-            this.dtpDeadline.TabIndex = 9;
-            this.dtpDeadline.ValueChanged += new System.EventHandler(this.dtpDeadline_ValueChanged);
+            this.dtpTaskDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpTaskDeadline.Location = new System.Drawing.Point(143, 271);
+            this.dtpTaskDeadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpTaskDeadline.Name = "dtpTaskDeadline";
+            this.dtpTaskDeadline.Size = new System.Drawing.Size(272, 27);
+            this.dtpTaskDeadline.TabIndex = 9;
+            this.dtpTaskDeadline.ValueChanged += new System.EventHandler(this.dtpDeadline_ValueChanged);
             // 
             // lblTaskFor
             // 
@@ -253,7 +254,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbTaskFor);
             this.Controls.Add(this.lblTaskFor);
-            this.Controls.Add(this.dtpDeadline);
+            this.Controls.Add(this.dtpTaskDeadline);
             this.Controls.Add(this.txtboxTaskName);
             this.Controls.Add(this.lblTaskName);
             this.Controls.Add(this.lblTaskDeadline);
@@ -281,7 +282,7 @@
         private System.Windows.Forms.Label lblTaskDeadline;
         private System.Windows.Forms.TextBox txtboxTaskName;
         private System.Windows.Forms.Label lblTaskName;
-        private System.Windows.Forms.DateTimePicker dtpDeadline;
+        private System.Windows.Forms.DateTimePicker dtpTaskDeadline;
         private System.Windows.Forms.Label lblTaskFor;
         private System.Windows.Forms.ComboBox cmbTaskFor;
         private System.Windows.Forms.Button btnAdd;
