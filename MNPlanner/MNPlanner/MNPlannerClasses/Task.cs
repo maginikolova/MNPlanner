@@ -15,7 +15,7 @@ namespace MNPlanner.MNPlannerClasses
         //Acts as a data carrier in our application
         public int TaskID { get; set; }
         public string TaskName { get; set; }
-        public string TaskDeadline { get; set; }
+        public DateTime TaskDeadline { get; set; }
         public string TaskFor { get; set; }
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;

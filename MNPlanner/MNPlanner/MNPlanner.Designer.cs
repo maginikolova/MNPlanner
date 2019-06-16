@@ -41,30 +41,31 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTaskList = new System.Windows.Forms.DataGridView();
             this.txtboxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(355, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(440, 25);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(143, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblTaskID
             // 
             this.lblTaskID.AutoSize = true;
             this.lblTaskID.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskID.Location = new System.Drawing.Point(24, 115);
+            this.lblTaskID.Location = new System.Drawing.Point(29, 162);
             this.lblTaskID.Name = "lblTaskID";
             this.lblTaskID.Size = new System.Drawing.Size(67, 20);
             this.lblTaskID.TabIndex = 1;
@@ -74,7 +75,7 @@
             // txtboxTaskID
             // 
             this.txtboxTaskID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtboxTaskID.Location = new System.Drawing.Point(143, 113);
+            this.txtboxTaskID.Location = new System.Drawing.Point(148, 160);
             this.txtboxTaskID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxTaskID.Name = "txtboxTaskID";
             this.txtboxTaskID.ReadOnly = true;
@@ -86,7 +87,7 @@
             this.lblTaskDeadline.AutoSize = true;
             this.lblTaskDeadline.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskDeadline.Location = new System.Drawing.Point(24, 275);
+            this.lblTaskDeadline.Location = new System.Drawing.Point(29, 322);
             this.lblTaskDeadline.Name = "lblTaskDeadline";
             this.lblTaskDeadline.Size = new System.Drawing.Size(75, 20);
             this.lblTaskDeadline.TabIndex = 5;
@@ -96,7 +97,7 @@
             // txtboxTaskName
             // 
             this.txtboxTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtboxTaskName.Location = new System.Drawing.Point(143, 162);
+            this.txtboxTaskName.Location = new System.Drawing.Point(148, 209);
             this.txtboxTaskName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxTaskName.Multiline = true;
             this.txtboxTaskName.Name = "txtboxTaskName";
@@ -108,7 +109,7 @@
             this.lblTaskName.AutoSize = true;
             this.lblTaskName.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskName.Location = new System.Drawing.Point(24, 165);
+            this.lblTaskName.Location = new System.Drawing.Point(29, 212);
             this.lblTaskName.Name = "lblTaskName";
             this.lblTaskName.Size = new System.Drawing.Size(94, 20);
             this.lblTaskName.TabIndex = 7;
@@ -117,7 +118,7 @@
             // dtpTaskDeadline
             // 
             this.dtpTaskDeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpTaskDeadline.Location = new System.Drawing.Point(143, 271);
+            this.dtpTaskDeadline.Location = new System.Drawing.Point(148, 318);
             this.dtpTaskDeadline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpTaskDeadline.Name = "dtpTaskDeadline";
             this.dtpTaskDeadline.Size = new System.Drawing.Size(272, 27);
@@ -129,7 +130,7 @@
             this.lblTaskFor.AutoSize = true;
             this.lblTaskFor.BackColor = System.Drawing.Color.Transparent;
             this.lblTaskFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTaskFor.Location = new System.Drawing.Point(24, 324);
+            this.lblTaskFor.Location = new System.Drawing.Point(29, 371);
             this.lblTaskFor.Name = "lblTaskFor";
             this.lblTaskFor.Size = new System.Drawing.Size(164, 20);
             this.lblTaskFor.TabIndex = 10;
@@ -147,16 +148,17 @@
             "Sport",
             "Social",
             "Other"});
-            this.cmbTaskFor.Location = new System.Drawing.Point(225, 321);
+            this.cmbTaskFor.Location = new System.Drawing.Point(230, 368);
             this.cmbTaskFor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbTaskFor.Name = "cmbTaskFor";
             this.cmbTaskFor.Size = new System.Drawing.Size(190, 28);
             this.cmbTaskFor.TabIndex = 11;
+            this.cmbTaskFor.SelectedIndexChanged += new System.EventHandler(this.cmbTaskFor_SelectedIndexChanged);
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.Location = new System.Drawing.Point(126, 393);
+            this.btnAdd.Location = new System.Drawing.Point(231, 432);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(131, 38);
@@ -168,7 +170,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdate.Location = new System.Drawing.Point(276, 393);
+            this.btnUpdate.Location = new System.Drawing.Point(381, 432);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(131, 38);
@@ -180,7 +182,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClear.Location = new System.Drawing.Point(573, 393);
+            this.btnClear.Location = new System.Drawing.Point(678, 432);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(131, 38);
@@ -191,7 +193,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete.Location = new System.Drawing.Point(424, 393);
+            this.btnDelete.Location = new System.Drawing.Point(529, 432);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(131, 38);
@@ -199,23 +201,24 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvTaskList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(462, 160);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(380, 189);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTaskList.Location = new System.Drawing.Point(466, 160);
+            this.dgvTaskList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvTaskList.Name = "dgvTaskList";
+            this.dgvTaskList.RowTemplate.Height = 24;
+            this.dgvTaskList.Size = new System.Drawing.Size(563, 236);
+            this.dgvTaskList.TabIndex = 16;
+            this.dgvTaskList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtboxSearch
             // 
             this.txtboxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtboxSearch.Location = new System.Drawing.Point(533, 112);
+            this.txtboxSearch.Location = new System.Drawing.Point(537, 112);
             this.txtboxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtboxSearch.Name = "txtboxSearch";
-            this.txtboxSearch.Size = new System.Drawing.Size(309, 27);
+            this.txtboxSearch.Size = new System.Drawing.Size(492, 27);
             this.txtboxSearch.TabIndex = 17;
             // 
             // lblSearch
@@ -223,7 +226,7 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSearch.Location = new System.Drawing.Point(461, 116);
+            this.lblSearch.Location = new System.Drawing.Point(465, 116);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(62, 20);
             this.lblSearch.TabIndex = 18;
@@ -232,22 +235,23 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(831, 14);
+            this.pictureBox2.Location = new System.Drawing.Point(1017, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 31);
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // MNPlanner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 463);
+            this.ClientSize = new System.Drawing.Size(1058, 498);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtboxSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTaskList);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -267,7 +271,7 @@
             this.Text = "MNPlanner";
             this.Load += new System.EventHandler(this.MNPlanner_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTaskList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,7 +293,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTaskList;
         private System.Windows.Forms.TextBox txtboxSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.PictureBox pictureBox2;

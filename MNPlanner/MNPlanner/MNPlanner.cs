@@ -24,7 +24,9 @@ namespace MNPlanner
 
         private void MNPlanner_Load(object sender, EventArgs e)
         {
-
+            //Load data on Data Gridview
+            DataTable dt = t.Select();
+            dgvTaskList.DataSource = dt;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -56,8 +58,8 @@ namespace MNPlanner
         {
             //Get the value from the input fields
             t.TaskName = txtboxTaskName.Text;
-            //t.TaskDeadline = dtpTaskDeadline.Value;
-            t.TaskDeadline = dtpTaskDeadline.Value.ToString("dd-MM-yyyy");
+            t.TaskDeadline = dtpTaskDeadline.Value;
+            //t.TaskDeadline = dtpTaskDeadline.Value.ToString("dd-MM-yyyy");
             //t.TaskDeadline = dtpTaskDeadline.Text;
             t.TaskFor = cmbTaskFor.Text;
 
@@ -67,18 +69,48 @@ namespace MNPlanner
             {
                 //Successfully inserted
                 MessageBox.Show("New task successfully inserted :)");
+                Clear();
             }
             else
             {
                 //Failed to add task
                 MessageBox.Show("Failed to add new task. Try again :/");
             }
-
+            //Load data on Data Gridview
+            DataTable dt = t.Select();
+            dgvTaskList.DataSource = dt;
         }
 
         private void lblTaskDeadline_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbTaskFor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //Method to clear the fields
+        public void Clear()
+        {
+            txtboxTaskName.Text = "";
+            cmbTaskFor.Text = "";
         }
     }
 }
