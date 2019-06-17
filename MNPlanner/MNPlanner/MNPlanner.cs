@@ -15,12 +15,15 @@ namespace MNPlanner
 {
     public partial class MNPlanner : Form
     {
+        MNPlannerClasses.Task t = new MNPlannerClasses.Task();
+
+        static string myconnstr = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+
+
         public MNPlanner()
         {
             InitializeComponent();
         }
-
-        MNPlannerClasses.Task t = new MNPlannerClasses.Task();
 
         private void MNPlanner_Load(object sender, EventArgs e)
         {
@@ -39,8 +42,31 @@ namespace MNPlanner
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //Get the data from the textboxes
+            t.TaskID = int.Parse(txtboxTaskID.Text);
+            t.TaskName = txtboxTaskName.Text;
+            //t.TaskDeadline = DateTime.Parse(dtpTaskDeadline.Text);
+            t.TaskDeadline = dtpTaskDeadline.Value;
+            t.TaskFor = cmbTaskFor.Text;
+
+            //Update data in database
+            bool success = t.Update(t);
+            if (success == true)
+            {
+                //Updated successfully
+                MessageBox.Show("Task has been successfully updated :)");
+                //Load data on Data Gridview
+                DataTable dt = t.Select();
+                dgvTaskList.DataSource = dt;
+                Clear();
+            }
+            else
+            {
+                //Failed to add task
+                MessageBox.Show("Failed to update task. Try again :/");
+            }
 
         }
 
@@ -68,7 +94,7 @@ namespace MNPlanner
             if(success == true)
             {
                 //Successfully inserted
-                MessageBox.Show("New task successfully inserted :)");
+                MessageBox.Show("New task has been successfully inserted :)");
                 Clear();
             }
             else
@@ -86,9 +112,20 @@ namespace MNPlanner
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvTaskList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvTaskList_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //Get the data drom DataGridView and load it to the textboxes
+            //Identify the row on which the mouse has clicked
+            int rowIndex = e.RowIndex;
+            txtboxTaskID.Text = dgvTaskList.Rows[rowIndex].Cells[0].Value.ToString();
+            txtboxTaskName.Text = dgvTaskList.Rows[rowIndex].Cells[1].Value.ToString();
+            dtpTaskDeadline.Text = dgvTaskList.Rows[rowIndex].Cells[2].Value.ToString();
+            cmbTaskFor.Text = dgvTaskList.Rows[rowIndex].Cells[3].Value.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -106,11 +143,50 @@ namespace MNPlanner
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //Get TaskID from the application
+            t.TaskID = Convert.ToInt32(txtboxTaskID.Text);
+            bool success = t.Delete(t);
+            if (success == true)
+            {
+                //Successfully deleted
+                MessageBox.Show("Task has been successfully deleted :)");
+                //Load data on Data Gridview
+                DataTable dt = t.Select();
+                dgvTaskList.DataSource = dt;
+                Clear();
+            }
+            else
+            {
+                //Failed to delete task
+                MessageBox.Show("Failed to delete task. Try again :/");
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
         //Method to clear the fields
         public void Clear()
         {
+            txtboxTaskID.Text = "";
             txtboxTaskName.Text = "";
             cmbTaskFor.Text = "";
+        }
+
+        private void txtboxSearch_TextChanged(object sender, EventArgs e)
+        {
+            //Get the value from the text box
+            string keyword = txtboxSearch.Text;
+
+            SqlConnection conn = new SqlConnection(myconnstr);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Tasks WHERE TaskName LIKE '%" + keyword + "%' OR TaskFor LIKE '%" + keyword + "%'", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dgvTaskList.DataSource = dt;
         }
     }
 }

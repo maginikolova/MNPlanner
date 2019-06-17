@@ -110,7 +110,8 @@ namespace MNPlanner.MNPlannerClasses
                 cmd.Parameters.AddWithValue("@TaskName", t.TaskName);
                 cmd.Parameters.AddWithValue("@TaskDeadline", t.TaskDeadline);
                 cmd.Parameters.AddWithValue("@TaskFor", t.TaskFor);
-                
+                cmd.Parameters.AddWithValue("@TaskID", t.TaskID);
+
                 //Connection open here
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
