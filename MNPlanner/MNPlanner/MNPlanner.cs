@@ -188,5 +188,20 @@ namespace MNPlanner
             sda.Fill(dt);
             dgvTaskList.DataSource = dt;
         }
+
+        private void txtboxTaskID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
